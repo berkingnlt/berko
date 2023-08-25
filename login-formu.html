@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol</title>
+    <style>
+      h1 {
+        text-align: center;
+        padding: 15px;
+        background-color: #bc5a45;
+        color: #b2b2b2;
+
+        border: black groove 3px;
+        border-radius: 5px;
+      }
+      div {
+        text-align: center;
+        padding: 4px;
+        background-color: #f18973;
+        color: #f4e1d2;
+        /* border: black groove 2px;*/
+      }
+      form {
+        border: black groove 3px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Kayıt Ol</h1>
+    </header>
+    <form action="">
+      <div id="isim">
+        <label for="Name">Ad: </label>
+        <input type="text" id="Name" placeholder="Adınızı Giriniz" />
+      </div>
+      <div id="soyisim">
+        <label for="Surname">Soyad: </label>
+        <input type="text" id="Surname" placeholder="Soyadınızı Giriniz" />
+      </div>
+      <div id="email">
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" placeholder="Mail Adresinizi Giriniz" />
+      </div>
+      <div id="şifre">
+        <label for="psw">Şifre: </label>
+        <input type="password" id="psw" placeholder="Şifre Giriniz" />
+        <input type="checkbox" onclick="myFunction()" />
+      </div>
+
+      <div>
+        <button type="submit">Kayıt Ol</button>
+        <button type="reset">Temizle</button>
+      </div>
+    </form>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("psw");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>
